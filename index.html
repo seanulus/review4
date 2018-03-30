@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Cowabunga Za Brah</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>TMNT Za Company</h1>
+      </div>
+      <form id="pizza-order">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-12">
+              <h3>Select Your Size:</h3>
+              <select class="form-control" id="size">
+                <option value="10">Dude (SM)</option>
+                <option value="12">DUDE (MD)</option>
+                <option value="14">DUDE! (LG)</option>
+                <option value="16">COWABUNGA! (XL)</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Meats: $1/Per Topping</h3>
+              <input type="checkbox" name="meat-topping" value="1"> Pepperoni<br>
+              <input type="checkbox" name="meat-topping" value="1"> Sausage<br>
+              <input type="checkbox" name="meat-topping" value="1"> Bacon<br>
+              <input type="checkbox" name="meat-topping" value="1"> Beef<br>
+              <input type="checkbox" name="meat-topping" value="1"> Flies<br>
+            </div>
+            <div class="col-md-6">
+              <h3>Veggies: $.50/Per Topping</h3>
+              <input type="checkbox" name="meat-topping" value=".5"> Onions<br>
+              <input type="checkbox" name="meat-topping" value=".5"> Peppers<br>
+              <input type="checkbox" name="meat-topping" value=".5"> Olives<br>
+              <input type="checkbox" name="meat-topping" value=".5"> Mushrooms<br>
+              <input type="checkbox" name="meat-topping" value=".5"> Spinach<br>
+            </div>
+          </div>
+        </div>
+          <button type="submit" class="btn btn-danger">Righteous!</button>
+      </form>
+      <div id="final-order">
+        <h5>We'll be at the sewer with your: <span id="order"></span></h5>
+        <h5>The price will be: <span id="price"></span></h5>
+      </div>
+    </div>
+  </body>
+</html>
