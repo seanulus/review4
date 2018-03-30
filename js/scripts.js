@@ -46,6 +46,7 @@ $(document).ready(function() {
     var newPizza = new Pizza(size, meats, veggies, price);
     var userTotal = newPizza.totalPrice();
 
+    $("#final-order").show();
     $("#order").text(newPizza.pizzaSize + " " + newPizza.pizzaMeats + " " + newPizza.pizzaVeggies + " pizza")
     $("#total").text("$" + userTotal);
   });
