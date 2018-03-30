@@ -1,5 +1,4 @@
 function Pizza(size, meats, veggies, price) {
-  debugger;
   this.pizzaSize = size;
   this.pizzaMeats = meats;
   this.pizzaVeggies = veggies;
@@ -7,7 +6,6 @@ function Pizza(size, meats, veggies, price) {
 };
 
 Pizza.prototype.totalPrice = function() {
-  debugger;
   return (this.pizzaMeats.length + (this.pizzaVeggies.length / 2) + this.pizzaPrice).toFixed(2);
 };
 
@@ -29,7 +27,6 @@ var sizePrice = function (size) {
 $(document).ready(function() {
   $("#pizza-order").submit(function(event) {
     event.preventDefault();
-    debugger;
     var size = $("#size").val();
     var meats = [];
     var veggies = [];
