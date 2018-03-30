@@ -1,8 +1,12 @@
 function Pizza(size, meats, veggies, price) {
   this.size = size;
-  this.meat = [];
-  this.veggie = [];
+  this.meats = meats;
+  this.veggies = veggies;
   this.price = price;
+};
+
+var totalPrice = function(meats, veggies, price) {
+  return (meats.length + (veggies.length / 2) + price).toFixed(2);
 };
 
 var sizePrice = function (size) {
@@ -19,14 +23,11 @@ var sizePrice = function (size) {
   return price;
 };
 
-Pizza.prototype.totalPrice = function() {
-  return (this.meat.length + (this.veggie.length / 2)) + this.price;
-};
 
 $(document).ready(function() {
   $("#pizza-order").submit(function(event) {
     event.preventDefault();
-    //debugger;
+
     var size = $("#size").val();
     var meats = [];
     var veggies = [];
@@ -39,9 +40,11 @@ $(document).ready(function() {
       var veggie = $(this).val();
       veggies.push(veggie);
     });
-    var pizza = new Pizza(size, meats, veggies, price);
-    console.log(meats);
-    var userTotal = pizza.totalPrice;
 
+    var pizza = new Pizza(size, meats, veggies, price);
+    var userTotal = totalPrice(meats, veggies, price);
+
+    $("#order").text(size + " " + meats + " " + veggies + " pizza")
+    $("#total").text("$" + userTotal);
   });
 });
